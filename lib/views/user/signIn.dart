@@ -40,6 +40,7 @@ class _SignInState extends State<SignIn> {
         'account': account,
         'password': password,
       });
+      Navigator.pushReplacementNamed(context, '/index');
     } else {
       // 表单校验失败 开启自动校验
       setState(() {
