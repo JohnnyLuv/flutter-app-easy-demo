@@ -46,19 +46,22 @@ class _PeopleState extends State<People> {
                 ],
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(15),
-              margin: EdgeInsets.only(top: 15, left: 15, right: 15),
-              decoration: BoxDecoration(color: Color.fromRGBO(0, 39, 111, 1), borderRadius: BorderRadius.circular(5)),
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.lock_outline, color: Color.fromRGBO(134, 143, 142, 1)),
-                  SizedBox(width: 15),
-                  Expanded(child: Text('支付密码', style: TextStyle(fontSize: 15))),
-                  Text('未设置', style: TextStyle(fontSize: 12, color: Color.fromRGBO(134, 143, 142, 1))),
-                  Icon(Icons.chevron_right, color: Color.fromRGBO(134, 143, 142, 1)),
-                ],
+            GestureDetector(
+              child: Container(
+                padding: EdgeInsets.all(15),
+                margin: EdgeInsets.only(top: 15, left: 15, right: 15),
+                decoration: BoxDecoration(color: Color.fromRGBO(0, 39, 111, 1), borderRadius: BorderRadius.circular(5)),
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.lock_outline, color: Color.fromRGBO(134, 143, 142, 1)),
+                    SizedBox(width: 15),
+                    Expanded(child: Text('支付密码', style: TextStyle(fontSize: 15))),
+                    Text('未设置', style: TextStyle(fontSize: 12, color: Color.fromRGBO(134, 143, 142, 1))),
+                    Icon(Icons.chevron_right, color: Color.fromRGBO(134, 143, 142, 1)),
+                  ],
+                ),
               ),
+              onTap: () => Navigator.pushNamed(context, '/setPayPwd'),
             ),
             Container(
               margin: EdgeInsets.only(top: 15, left: 15, right: 15),
