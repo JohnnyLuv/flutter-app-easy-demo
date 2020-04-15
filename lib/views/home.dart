@@ -46,6 +46,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(child: AppBar(elevation: 0), preferredSize: Size.fromHeight(0)),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
