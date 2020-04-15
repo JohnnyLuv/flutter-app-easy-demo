@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/views/qrCode.dart';
 import 'package:my_app/views/user/setPayPwd.dart';
 import 'package:my_app/views/user/signIn.dart';
 import 'package:my_app/views/user/signUp.dart';
@@ -19,13 +20,14 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromRGBO(2, 25, 72, 1),
         accentColor: Color.fromRGBO(27, 255, 255, 1),
       ),
-      initialRoute: '/index',
+      initialRoute: '/qrCode',
       routes: {
         '/signIn': (context) => SignIn(),
         '/signUp': (context) => SignUp(),
         '/resetPwd': (context) => ResetPwd(),
         '/index': (context) => Layout(),
         '/setPayPwd': (context) => SetPayPwd(),
+        '/qrCode': (context) => QRCode()
       },
     );
   }
