@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/components/dashBorder.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 class Invite extends StatefulWidget {
   Invite({Key key}) : super(key: key);
@@ -87,9 +88,13 @@ class _InviteState extends State<Invite> {
             decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.only(bottomLeft: Radius.circular(7), bottomRight: Radius.circular(7))),
             child: Column(
               children: <Widget>[
-                Image.asset('assets/images/avatar.jpeg', width: 140, height: 140),
+                QrImage(
+                  data: 'baidu.com',
+                  size: 140,
+                  padding: EdgeInsets.all(0),
+                ),
                 SizedBox(height: 20),
-                Text('扫描二维码注册下载 APP', style: TextStyle(fontSize: 14, color: Color.fromRGBO(2, 26, 75, 1))),
+                Text('扫描二维码注册下载 APP', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color.fromRGBO(2, 26, 75, 1))),
                 SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -97,7 +102,7 @@ class _InviteState extends State<Invite> {
                     Container(
                       width: 220,
                       padding: EdgeInsets.only(left: 40),
-                      child: Text('https://h5.sdfsshell.com/?code=ARfDL7A', textAlign: TextAlign.center, style: TextStyle(fontSize: 14, color: Color.fromRGBO(2, 26, 75, 1))),
+                      child: Text('https://h5.sdfsshell.com/?code=ARfDL7A', textAlign: TextAlign.center, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: Color.fromRGBO(2, 26, 75, 1))),
                     ),
                     IconButton(
                       icon: Icon(Icons.content_copy),
@@ -109,28 +114,33 @@ class _InviteState extends State<Invite> {
                     ),
                   ],
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    FlatButton(
-                      child: Text('复制链接', style: TextStyle(fontSize: 14, color: Color.fromRGBO(45, 161, 151, 1))),
-                      onPressed: () {
-                        print('复制链接拉');
-                      },
+                    Expanded(
+                      child: FlatButton(
+                        child: Text('复制链接', style: TextStyle(fontSize: 14, color: Color.fromRGBO(45, 161, 151, 1))),
+                        onPressed: () {
+                          print('复制链接拉');
+                        },
+                      ),
                     ),
                     Container(width: 1.5, height: 13, decoration: BoxDecoration(color: Color.fromRGBO(134, 143, 142, 1))),
-                    FlatButton(
-                      child: Text('保存图片', style: TextStyle(fontSize: 14, color: Color.fromRGBO(45, 161, 151, 1))),
-                      onPressed: () {
-                        print('保存图片拉');
-                      },
+                    Expanded(
+                      child: FlatButton(
+                        child: Text('保存图片', style: TextStyle(fontSize: 14, color: Color.fromRGBO(45, 161, 151, 1))),
+                        onPressed: () {
+                          print('保存图片拉');
+                        },
+                      ),
                     ),
                   ],
                 ),
               ],
             ),
           ),
+          Container(margin: EdgeInsets.only(top: 30), alignment: Alignment.center, child: Text('邀请好友注册吧！'))
         ],
       ),
     );

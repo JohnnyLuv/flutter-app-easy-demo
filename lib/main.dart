@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      initialRoute: '/invite',
+      initialRoute: '/index',
       routes: {
         '/signIn': (context) => SignIn(), // 登录
         '/signUp': (context) => SignUp(), // 注册

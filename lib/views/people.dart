@@ -33,18 +33,23 @@ class _PeopleState extends State<People> {
                 ],
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(15),
-              margin: EdgeInsets.only(top: 15, left: 15, right: 15),
-              decoration: BoxDecoration(color: Color.fromRGBO(0, 39, 111, 1), borderRadius: BorderRadius.circular(5)),
-              child: Row(
-                children: <Widget>[
-                  Icon(Icons.group_add, color: Color.fromRGBO(134, 143, 142, 1)),
-                  SizedBox(width: 15),
-                  Expanded(child: Text('邀请好友', style: TextStyle(fontSize: 15))),
-                  Icon(Icons.chevron_right, color: Color.fromRGBO(134, 143, 142, 1)),
-                ],
+            GestureDetector(
+              child: Container(
+                padding: EdgeInsets.all(15),
+                margin: EdgeInsets.only(top: 15, left: 15, right: 15),
+                decoration: BoxDecoration(color: Color.fromRGBO(0, 39, 111, 1), borderRadius: BorderRadius.circular(5)),
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.group_add, color: Color.fromRGBO(134, 143, 142, 1)),
+                    SizedBox(width: 15),
+                    Expanded(child: Text('邀请好友', style: TextStyle(fontSize: 15))),
+                    Icon(Icons.chevron_right, color: Color.fromRGBO(134, 143, 142, 1)),
+                  ],
+                ),
               ),
+              onTap: () {
+                Navigator.pushNamed(context, '/invite');
+              },
             ),
             GestureDetector(
               child: Container(

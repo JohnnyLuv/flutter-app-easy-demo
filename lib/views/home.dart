@@ -83,26 +83,41 @@ class _HomeState extends State<Home> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Image.asset('assets/images/icon-invited.png', width: 50, height: 50),
-                        SizedBox(height: 10),
-                        Text('邀请好友', style: TextStyle(fontSize: 12)),
-                      ],
+                    GestureDetector(
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset('assets/images/icon-invited.png', width: 50, height: 50),
+                          SizedBox(height: 10),
+                          Text('邀请好友', style: TextStyle(fontSize: 12)),
+                        ],
+                      ),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/invite');
+                      },
                     ),
-                    Column(
-                      children: <Widget>[
-                        Image.asset('assets/images/icon-recharge.png', width: 50, height: 50),
-                        SizedBox(height: 10),
-                        Text('充币', style: TextStyle(fontSize: 12)),
-                      ],
+                    GestureDetector(
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset('assets/images/icon-recharge.png', width: 50, height: 50),
+                          SizedBox(height: 10),
+                          Text('充币', style: TextStyle(fontSize: 12)),
+                        ],
+                      ),
+                      onTap: () {
+                        print('充币拉');
+                      },
                     ),
-                    Column(
-                      children: <Widget>[
-                        Image.asset('assets/images/icon-reward.png', width: 50, height: 50),
-                        SizedBox(height: 10),
-                        Text('收益', style: TextStyle(fontSize: 12)),
-                      ],
+                    GestureDetector(
+                      child: Column(
+                        children: <Widget>[
+                          Image.asset('assets/images/icon-reward.png', width: 50, height: 50),
+                          SizedBox(height: 10),
+                          Text('收益', style: TextStyle(fontSize: 12)),
+                        ],
+                      ),
+                      onTap: () {
+                        print('收益拉');
+                      },
                     ),
                   ],
                 ),
