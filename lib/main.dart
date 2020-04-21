@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/views/demo/screenToImg.dart';
 import 'package:my_app/views/invite.dart';
 import 'package:my_app/views/user/setPayPwd.dart';
 import 'package:my_app/views/user/signIn.dart';
 import 'package:my_app/views/user/signUp.dart';
 import 'package:my_app/views/user/resetPwd.dart';
 import 'package:my_app/views/layout.dart';
-import 'package:my_app/views/qrCode.dart';
+import 'package:my_app/views/demo/qrCode.dart';
+import 'package:my_app/views/userList.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,8 +34,11 @@ class MyApp extends StatelessWidget {
         '/resetPwd': (context) => ResetPwd(), // 重置密码
         '/index': (context) => Layout(), // 首页
         '/setPayPwd': (context) => SetPayPwd(), // 设置支付密码
-        '/qrCode': (context) => QRCode(), // 测试扫码组件
         '/invite': (context) => Invite(), // 邀请好友
+        '/userList': (context) => UserList(), // 用户列表
+
+        '/qrCode': (context) => QRCode(), // 测试扫码组件
+        '/screenToImg': (context) => ScreenToImg(), // 测试截屏
       },
     );
   }
