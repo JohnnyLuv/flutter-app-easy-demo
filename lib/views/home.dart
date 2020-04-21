@@ -105,7 +105,10 @@ class _HomeState extends State<Home> {
                       ),
                       onTap: () {
                         print('充币拉');
-                        Navigator.pushNamed(context, '/userList', arguments: 'hey johnny');
+                        Navigator.pushNamed(context, '/userList', arguments: {
+                          'name': 'johnny',
+                          'age': '18',
+                        });
                       },
                     ),
                     GestureDetector(
