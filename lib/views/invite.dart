@@ -22,13 +22,6 @@ class _InviteState extends State<Invite> {
   void _getScreenshot() async {
     var _storageStatus = await Permission.storage.status;
     print(_storageStatus);
-    if (_storageStatus.isUndetermined) {
-      print('isUndetermined,isUndetermined,isUndetermined');
-      Map<Permission, PermissionStatus> statuses = await [
-        Permission.storage,
-      ].request();
-      print(statuses[Permission.location]);
-    }
     if (_storageStatus == PermissionStatus.granted) {
       print('granted,granted,granted');
 
@@ -44,6 +37,12 @@ class _InviteState extends State<Invite> {
       }).catchError((onError) {
         print(onError);
       });
+    } else {
+      print('isUndetermined,isUndetermined,isUndetermined');
+      Map<Permission, PermissionStatus> statuses = await [
+        Permission.storage,
+      ].request();
+      print(statuses[Permission.location]);
     }
   }
 
