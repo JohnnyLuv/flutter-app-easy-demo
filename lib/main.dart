@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      initialRoute: '/invite',
+      initialRoute: '/ggMap',
       onGenerateRoute: onGenerateRoute,
     );
   }

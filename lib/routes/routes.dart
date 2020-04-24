@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/views/demo/ggMap.dart';
 import 'package:my_app/views/demo/qrCode.dart';
 import 'package:my_app/views/demo/screenToImg.dart';
 import 'package:my_app/views/invite.dart';
@@ -17,9 +18,10 @@ final routes = {
   '/setPayPwd': (context) => SetPayPwd(), // 设置支付密码
   '/invite': (context) => Invite(), // 邀请好友
 
-  '/userList': (context,{arguments}) => UserList(arguments:arguments), // 用户列表
+  '/userList': (context, {arguments}) => UserList(arguments: arguments), // 测试跳转传参
   '/qrCode': (context) => QRCode(), // 测试扫码组件
   '/screenToImg': (context) => ScreenToImg(), // 测试截屏
+  '/ggMap': (context) => GGMap(), // 测试地图
 };
 
 var onGenerateRoute = (RouteSettings settings) {
